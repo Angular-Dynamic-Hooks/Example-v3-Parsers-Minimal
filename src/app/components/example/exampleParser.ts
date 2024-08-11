@@ -7,17 +7,17 @@ import { ExampleComponent } from './example.component';
 })
 export class ExampleParser implements HookParser {
 
-  findHookElements(contentElement: any, context: any, options: ParseOptions): any[] {
-    // Return all <app-example> elements
-    return Array.from(contentElement.querySelectorAll('app-example'));
+  findHookElements(contentElement: any): any[] {
+    // Return the elements to load the component into
+    return Array.from(contentElement.querySelectorAll('some-element'));
   }
 
-  loadComponent(hookId: number, hookValue: HookValue, context: any, childNodes: any[], options: ParseOptions): HookComponentData {
+  loadComponent(): HookComponentData {
     // Return the component class
     return { component: ExampleComponent };
   }
 
-  getBindings(hookId: number, hookValue: HookValue, context: any, options: ParseOptions): HookBindings {
+  getBindings(): HookBindings {
     // Return inputs/outputs to set
     return {
       inputs: {

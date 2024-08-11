@@ -10,6 +10,6 @@ import { ExampleParser } from './components/example/exampleParser';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  content = 'Load a component here: <app-example></app-example>';
+  content = 'Load a component here: <some-element></some-element>';
   parsers = [ExampleParser];
 }
