@@ -11,5 +11,5 @@ import { ExampleParser } from './components/example/exampleParser';
 })
 export class AppComponent {
   content = 'Load a component here: <app-example></app-example>';
-  parsers = [ExampleParser];  
+  parsers = [ExampleParser];
 }
